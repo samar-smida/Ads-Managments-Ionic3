@@ -1,0 +1,48 @@
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding>
+
+<img src="assets/imgs/panier.png" alt="logo">
+
+
+
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <ion-item>
+      <ion-label>Email :</ion-label>
+      <ion-input type="text" [(ngModel)]="email" name="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password :</ion-label>
+      <ion-input type="password" [(ngModel)]="password " name="password"></ion-input>
+    </ion-item>
+
+    <button ion-button type="submit" color="rose2"  block>
+       Connecter
+    </button>
+    
+  </form>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <button ion-button type="submit" color="rose2"  block (click)="nouvelprofil()">
+    Nouvel compte
+ </button>
+
+</ion-content>

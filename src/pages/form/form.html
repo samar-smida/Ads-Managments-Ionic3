@@ -1,0 +1,39 @@
+
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-title >form</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <img src="assets/imgs/panier.png" alt="logo">
+
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <ion-item>
+      <ion-label>Nom :</ion-label>
+      <ion-input type="text" [(ngModel)]="nom" name="nom" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Prenom :</ion-label>
+      <ion-input type="text" [(ngModel)]="prenom" name="prenom" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email :</ion-label>
+      <ion-input type="text" [(ngModel)]="email" name="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password :</ion-label>
+      <ion-input type="password" [(ngModel)]="password " name="password"></ion-input>
+    </ion-item>
+
+    <button ion-button type="submit" color="rose2"  block>
+       Ajouter
+    </button>
+    
+  </form>
+
+</ion-content>

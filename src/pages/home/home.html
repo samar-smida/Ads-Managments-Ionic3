@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-title>Accueil</ion-title>
+
+     <ion-buttons end *ngIf=isLoggedIn()>
+       <button ion-button icon-only (click)="addAnnonce()">
+         <ion-icon name="add-circle"></ion-icon>
+       </button>
+     </ion-buttons>
+
+     <ion-buttons end>
+      <button ion-button icon-only (click)="refresh()">
+        <ion-icon name="refresh-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+  <ion-searchbar   (ionInput)="getItems($event)"></ion-searchbar>
+  <!-- <ion-list>
+       <ion-item *ngFor="let item of items">
+          {{ item }}
+       </ion-item>
+  </ion-list> -->
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let an of data">
+      <ion-item style="background-color: rgb(214, 191, 204);" >
+        <!-- <ion-avatar item-start>
+          <img src="assets/imgs/p1.jpg">
+        </ion-avatar>
+        <h1>{{an.nomarticle}}</h1>
+        <h3>{{an.prix}}</h3>
+        <h3>{{an.adresse}}</h3>
+        <h3>{{an.telephone}}</h3>
+        <p>{{an.description}}</p> -->
+        <ion-card style="background-color: rgb(214, 191, 204);" >
+          <!-- <img src="assets/imgs/car.jpeg"/> -->
+          <ion-card-content>
+              <ion-card-title>
+                  <h1>{{an.nomarticle}}</h1>
+              </ion-card-title>
+              
+              <h3> <ion-icon name="cash"></ion-icon> {{an.prix}} Dt</h3>
+              <h3> <ion-icon name="home"></ion-icon> {{an.adresse}}</h3>
+              <h3> <ion-icon name="call"></ion-icon> {{an.telephone}}</h3>
+              <p><ion-icon name="add"></ion-icon> {{an.description}}</p>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-item>
+
+      <ion-item-options side="left" *ngIf=isLoggedIn() >
+        <button ion-button color="rose2" (click)=" editAnnonce(an.id,an.nomarticle,an.prix,an.adresse,an.telephone,an.description,an.idc )">
+          <ion-icon name="create"></ion-icon>
+          Modifier
+        </button>
+      </ion-item-options>
+
+      <ion-item-options side="right" *ngIf=isLoggedIn()>
+        <button ion-button color="danger" (click)=" deleteAnnonce(an.id) ">
+          <ion-icon name="trash"></ion-icon>
+          Supprimer
+        </button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
+
+

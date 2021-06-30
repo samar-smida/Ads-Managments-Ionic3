@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-title>
+      Profil
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Mon profil : </ion-list-header>
+    <ion-item>
+       <ion-avatar item-start>
+        <img src="assets/imgs/user.png">
+      </ion-avatar>
+      <h2> Nom :  {{ getname() }} </h2> 
+      <h2>  Prenom : {{getprenom() }}</h2>
+      
+      <h2> <ion-icon name="mail"></ion-icon> {{ getemail () }}</h2>
+
+    </ion-item>
+
+  </ion-list>
+
+<!-- annonce user 
+<ion-item-sliding *ngFor="let an of data">
+  <ion-item>
+  
+    <ion-card>
+      
+      <ion-card-content>
+        <ion-card-title>
+          <h1>{{an.nomarticle}}</h1>
+          </ion-card-title>
+          
+          <h3> <ion-icon name="cash"></ion-icon> {{an.prix}} Dt</h3>
+          <h3> <ion-icon name="home"></ion-icon> {{an.adresse}}</h3>
+          <h3> <ion-icon name="call"></ion-icon> {{an.telephone}}</h3>
+          <p><ion-icon name="add"></ion-icon> {{an.description}}</p>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-item> -->
+
+
+
+
+
+
+
+
+  <ion-fab    bottom right edge style="margin-bottom: 10%;">
+    <button color="rose" ion-fab mini (click)="addAnnonce()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+
+
+
+</ion-content>

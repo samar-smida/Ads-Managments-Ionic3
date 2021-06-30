@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-title>
+      Réglages
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <button *ngIf="!isLoggedIn()" ion-item (click)=goToLogin() color="rose">
+      Connecter
+    </button> 
+    <button *ngIf="isLoggedIn()" ion-item (click)=disconnect() color="rose">
+      Deconnecter
+    </button>  
+  </ion-list>
+</ion-content>

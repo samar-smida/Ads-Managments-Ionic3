@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-title>Modifier annonce</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="update()">
+    <!--ion-item>
+      <ion-label>Article :</ion-label>
+      <ion-input type="text" [(ngModel)]="data.nomarticle" name="nomarticle"></ion-input>
+    </ion-item-->
+    <ion-item>
+      <ion-label>Article * :</ion-label>
+      <ion-select [(ngModel)]="data.nomarticle" name="nomarticle" >
+        <ion-option value="Aparement" >Apartement</ion-option>
+        <ion-option value="Voiture" > Voiture</ion-option>
+        <ion-option value="Vêtement" > Vêtement</ion-option>
+        <ion-option value="Vélo"> Vélo</ion-option>
+      </ion-select>
+    </ion-item>
+    
+
+    <ion-item>
+      <ion-label>Prix(DT) * :</ion-label>
+      <ion-input type="Number" [(ngModel)]="data.prix" name="prix" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Adresse * :</ion-label>
+      <ion-input type="text" [(ngModel)]="data.adresse" name="adresse" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Numero téléphone * :</ion-label>
+      <ion-input type="text" [(ngModel)]="data.telephone" name="telephone" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Info :</ion-label>
+      <ion-textarea type="text" [(ngModel)]="data.description " name="description "></ion-textarea>
+    </ion-item>
+
+    <button ion-button type="submit" color="rose2"  block>
+       Modifier 
+    </button>
+    
+  </form>
+
+</ion-content>
